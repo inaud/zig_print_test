@@ -10,7 +10,7 @@ pub fn main() !void {
     const s2 = "jpg";
     var counter:i32 = 5;
     _ = &counter;
-    const slsBuf = try std.fmt.bufPrint(&sBuf,"{s}_{}.{s}",.{s1,counter,s2});
+    const slsBuf = try std.fmt.bufPrint(&sBuf,"{s}_{:0>6}.{s}",.{s1,counter,s2});
     try stdout.print("\n {s}", .{slsBuf});
     for(0..5)|i|{
       try stdout.print("\n {}", .{i});
